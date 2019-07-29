@@ -1,0 +1,6 @@
+_HiStOrY_V2_
+DB::table('vagas')->first();
+DB::table('vagas')->exists();
+DB::seed
+DB::table('vagas')->exists();
+ifconfig

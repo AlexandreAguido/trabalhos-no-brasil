@@ -1,0 +1,47 @@
+#modal {
+    height: 100%;
+    background-color: rgba(255, 255, 255);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 0;
+    max-width: 500px;
+    overflow: hidden;
+    transition: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    transition-property: all;
+    border-right: 1px solid gray;
+}
+
+.close-btn {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    justify-self: end;
+    float: right;
+    clear: both;
+}
+
+.menu-left {
+    grid-row-start: 2;
+    align-self: center;
+}
+
+.menu-item {
+    padding-left: 8px;
+    line-height: 2;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+.menu-item a {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    font-family: "Baloo", sans-serif;
+    font-size: 1.2em;
+    color: #086fa1;
+}
+
+.menu-item a img {
+    width: 64px;
+    height: 62px;
+}

@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  web:
+    build:
+      context: ./docker/server
+    ports:
+      - 4000:80
+    volumes:
+      - ./src:/var/www/html
+    env_file:
+      - src/.env
+    container_name: app
+    depends_on:
+      - db
+  db:
+    image: mysql:5.7
+    restart: always
+    volumes:
+      - ~/Documentos/mysql/trab_brasil:/var/lib/mysql
+    env_file:
+      - src/.env

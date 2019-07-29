@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Palanquin");
+@import url("https://fonts.googleapis.com/css?family=Baloo");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+
+html {
+    min-width: 300px;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.container {
+    padding: 0.5em 1em;
+}
+/*header*/
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 3em auto;
+    background-color: #044362;
+}
+
+#modal-open {
+    width: 2em;
+    cursor: pointer;
+    align-self: center;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 1.4em;
+    place-self: center;
+    color: white;
+    font-family: "Palanquin", sans-serif;
+}
+
+/*main-content*/
+main {
+    grid-area: main;
+    background-color: #ebebeb;
+}
+
+main h1 {
+    font-family: "Baloo", cursive;
+    font-size: 1.5em;
+    font-weight: 100;
+    color: #044362;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 1.8em;
+}
+
+.site-content {
+    margin-top: 3em;
+}
+
+/*search form*/
+.search p {
+    color: #044362;
+    font-family: "Baloo", cursive;
+    font-size: 1.2em;
+    font-weight: 100%;
+}
+.search input {
+    width: 95%;
+    margin-bottom: 1.6em;
+}
+
+.search input {
+    height: 2.5em;
+    margin-top: 0.4em;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    padding: 2px 10px;
+}
+
+.search-btn {
+    display: block;
+    margin: 2em auto 6em auto;
+    width: 60%;
+    font-size: 1em;
+    padding: 0.8em 1.2em;
+    max-width: 600px;
+    background-color: #009688;
+    border: 1px solid #009688;
+    border-radius: 4px;
+    color: #fff;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+/*footer*/
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #044362;
+    padding: 2em 0;
+}
+footer * {
+    color: #fff;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 600px) {
+    header .logo {
+        font-size: 1.6em;
+    }
+
+    .search-btn {
+        padding: 0.8em 3em;
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .search {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
