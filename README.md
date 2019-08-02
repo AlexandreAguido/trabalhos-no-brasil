@@ -1,9 +1,9 @@
 #Projeto Trabalhos no Brasil
 
-Este repositório é um site busca de empregos fictício. As vagas são buscadas em
+Este projeto é um site busca de empregos fictício. As vagas são encontradas em
 sites reais através [deste programa](https://github.com/AlexandreAguido/scrapperEmpregos)
 
-Uma versão funcional está disponível no endereço
+Uma versão funcional está disponível no endereço https://trabalhos-no-brasil.herokuapp.com/
 
 ###Instruções para a execução local
 
