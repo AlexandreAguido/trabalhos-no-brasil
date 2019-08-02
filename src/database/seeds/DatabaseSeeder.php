@@ -1,7 +1,8 @@
 <?php
-require('Geonames.php');
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Libraries\Geonames;
+use App\Libraries\GoogleDriveWrapper;
 
 class DatabaseSeeder extends Seeder
 {
@@ -81,6 +82,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {   
         $path = dirname( __FILE__ ) . '/../../storage/vagas/';
+        /* download file*/
+        $drive = new GoogleDriveWrapper;
+        $drive->download_file($path);
+        
         $has_vagas = DB::table('vagas')->exists();
         $files = scandir($path);
         foreach($files as $f_name){
@@ -94,5 +99,7 @@ class DatabaseSeeder extends Seeder
             $this->store_data($data);
             if($f_name != 'sample.json') {unlink($f_name);}
         }
+        
+        $drive->delete_file();
     }
 }

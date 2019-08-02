@@ -1,7 +1,7 @@
 <?php
 
-require( __DIR__ . '/../../vendor/rmccue/requests/library/Requests.php');
-Requests::register_autoloader();
+namespace App\Libraries;
+use Requests;
 
 class Geonames{
     private $base_url;
