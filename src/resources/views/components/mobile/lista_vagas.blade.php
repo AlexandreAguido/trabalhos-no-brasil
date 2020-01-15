@@ -1,7 +1,7 @@
 <section class="vagas_container">
     @foreach($vagas as $vaga)
         <article class="vaga_card">
-            <h2><a class="titulo" href="/vaga/{{snake_case($vaga->titulo) . '/' . $vaga->id}}">{{ $vaga->titulo }}</a></h2>
+            <h2><a class="titulo" href="/vaga/{{urlencode($vaga->titulo) . '/' . $vaga->id}}">{{ $vaga->titulo }}</a></h2>
             @if ($vaga->empresa)
                 <p>Empresa: {{ $vaga->empresa }}
             @else
