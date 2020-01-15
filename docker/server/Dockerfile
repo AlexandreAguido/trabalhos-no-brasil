@@ -1,9 +1,5 @@
 FROM php:7.2-apache
 
-# Set working directory
-WORKDIR /var/www/html
-
-
 # Install extensions
 RUN apt update; apt upgrade -y; \
     apt install curl
